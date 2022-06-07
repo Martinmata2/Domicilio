@@ -20,19 +20,19 @@ class Domicilio extends Query
 		    $url = __DIR__;
 		    if ($resultado = $this->conexion->query("SHOW TABLES LIKE 'paises'"))
 		    {
-		        if ($resultado->field_count == 0) $this->conexion->multi_query(file_get_contents($url."/Datos/paises.sql"));
+		        if ($resultado->num_rows == 0) $this->conexion->multi_query(file_get_contents($url."/Datos/paises.sql"));
 		    }
 		    if ($resultado = $this->conexion->query("SHOW TABLES LIKE 'estados'"))
 		    {
-		        if ($resultado->field_count == 0) $this->conexion->multi_query(file_get_contents($url."/Datos/estados.sql"));
+		        if ($resultado->num_rows == 0) $this->conexion->multi_query(file_get_contents($url."/Datos/estados.sql"));
 		    }
 		    if ($resultado = $this->conexion->query("SHOW TABLES LIKE 'municipios'"))
 		    {
-		        if ($resultado->field_count == 0) $this->conexion->multi_query(file_get_contents($url."/Datos/municipios.sql"));
+		        if ($resultado->num_rows == 0) $this->conexion->multi_query(file_get_contents($url."/Datos/municipios.sql"));
 		    }
 		    if ($resultado = $this->conexion->query("SHOW TABLES LIKE 'colonias'"))
 		    {
-		        if ($resultado->field_count == 0)
+		        if ($resultado->num_rows == 0)
 		        {
 		            $this->conexion->multi_query(file_get_contents($url."/Datos/colonias.sql"));
 		            $this->conexion->multi_query(file_get_contents($url."/Datos/colonias2.sql"));		           
