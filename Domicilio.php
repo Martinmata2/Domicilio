@@ -3,9 +3,10 @@
  * @version v2020_2
  * @author Martin Mata
  */
-namespace Clases\Domicilio;
+namespace Cabeca\Domicilio;
 
-use Clases\MySql\Query;
+
+use Cabeca\MySql\Query;
 
 class Domicilio extends Query
 {
