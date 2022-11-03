@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-	var url = "../../Cabeca/Domicilio/Ajax/index.php";
+	var url = INICIO+"../Cabeca/Domicilio/Ajax/index.php";
 	obtenerPaises("MEX");
 	obtenerEstados("MEX");	    
 	$("#CliCp").change(function()
